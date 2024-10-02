@@ -1,6 +1,7 @@
 //week 6 and p-2
 #include <stdio.h>
 #include <stdlib.h>
+int i,j;
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = low - 1;
