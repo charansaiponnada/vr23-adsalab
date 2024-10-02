@@ -1,11 +1,6 @@
+//code for week 6 p-2
 #include <stdio.h>
 #include <stdlib.h>
-
-void quickSort(int arr[], int low, int high);
-int partition(int arr[], int low, int high);
-void mergeSort(int arr[], int left, int right);
-void merge(int arr[], int left, int mid, int right);
-
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
