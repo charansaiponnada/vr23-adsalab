@@ -1,3 +1,4 @@
+//code for week-6 and program 1
 #include <stdio.h>
 
 struct Pair {
