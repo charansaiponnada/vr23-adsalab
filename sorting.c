@@ -91,7 +91,7 @@ int main() {
             case 1:
                 quickSort(arr, 0, n - 1);
                 printf("Array after Quick Sort:\n");
-                for (int i = 0; i < n; i++) {
+                for (i = 0; i < n; i++) {
                     printf("%d ", arr[i]);
                 }
                 printf("\n");
@@ -100,7 +100,7 @@ int main() {
             case 2:
                 mergeSort(arr, 0, n - 1);
                 printf("Array after Merge Sort:\n");
-                for (int i = 0; i < n; i++) {
+                for ( i = 0; i < n; i++) {
                     printf("%d ", arr[i]);
                 }
                 printf("\n");
