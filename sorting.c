@@ -1,7 +1,6 @@
 //week 6 and p-2
 #include <stdio.h>
 #include <stdlib.h>
-int i, j;  
 void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int pi = partition(arr, low, high);
@@ -12,8 +11,8 @@ void quickSort(int arr[], int low, int high) {
 
 int partition(int arr[], int low, int high) {
     int pivot = arr[high];
-    i = low - 1;
-    for (j = low; j < high; j++) {
+    int i = low - 1;
+    for (int j = low; j < high; j++) {
         if (arr[j] < pivot) {
             i++;
             int temp = arr[i];
@@ -40,14 +39,13 @@ void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
     int L[n1], R[n2];
-    for (i = 0; i < n1; i++) {
+    for (int i = 0; i < n1; i++) {
         L[i] = arr[left + i];
     }
-    for (j = 0; j < n2; j++) {
+    for (int j = 0; j < n2; j++) {
         R[j] = arr[mid + 1 + j];
     }
-    i = 0; j = 0;
-    int k = left;
+    int i = 0, j = 0, k = left;
     while (i < n1 && j < n2) {
         if (L[i] <= R[j]) {
             arr[k] = L[i];
@@ -78,9 +76,10 @@ int main() {
     int arr[n];
     
     printf("Enter the elements:\n");
-    for (i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
+    
     while (1) {
         printf("\nChoose an option:\n");
         printf("1. Quick Sort\n");
@@ -92,7 +91,7 @@ int main() {
             case 1:
                 quickSort(arr, 0, n - 1);
                 printf("Array after Quick Sort:\n");
-                for (i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++) {
                     printf("%d ", arr[i]);
                 }
                 printf("\n");
@@ -101,7 +100,7 @@ int main() {
             case 2:
                 mergeSort(arr, 0, n - 1);
                 printf("Array after Merge Sort:\n");
-                for (i = 0; i < n; i++) {
+                for (int i = 0; i < n; i++) {
                     printf("%d ", arr[i]);
                 }
                 printf("\n");
@@ -114,5 +113,6 @@ int main() {
                 printf("Invalid choice. Try again.\n");
         }
     }
+    
     return 0;
 }
