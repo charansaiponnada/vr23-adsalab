@@ -11,3 +11,5 @@ Here you can all the lab programs for vr23 advanced data structures and algorith
 # week-6:
 - min_max.c
 - sorting.c
+# week-7:
+  - Dijkistra.c
