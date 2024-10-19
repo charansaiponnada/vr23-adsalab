@@ -139,7 +139,7 @@ int main() {
 
         switch (choice) {
             case 1:
-                for(int i = 0; i < n; i++) {
+                for( i = 0; i < n; i++) {
                     insertMinHeap(&minHeap, values[i]);
                 }
                 printf("Inserted elements into Min Heap\n");
