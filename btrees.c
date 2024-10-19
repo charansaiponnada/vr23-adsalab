@@ -13,12 +13,13 @@ typedef struct BTreeNode {
 BTreeNode* root = NULL;
 
 BTreeNode* createNode(int key, BTreeNode* child) {
+	int i;
     BTreeNode* newNode = (BTreeNode*)malloc(sizeof(BTreeNode));
     newNode->keys[1] = key;
     newNode->count = 1;
     newNode->children[0] = root;
     newNode->children[1] = child;
-    for (int i = 2; i <= MAX; i++) {
+    for (i = 2; i <= MAX; i++) {
         newNode->children[i] = NULL;
     }
     return newNode;
@@ -98,7 +99,7 @@ void insert(int key) {
 }
 
 void deleteNode(int key, BTreeNode* node) {
-    int pos, flag = 0;
+    int pos, flag = 0,i;
     if (!node) {
         printf("Tree is empty\n");
         return;
@@ -113,7 +114,7 @@ void deleteNode(int key, BTreeNode* node) {
     }
 
     if (flag) {
-        for (int i = pos; i < node->count; i++) {
+        for ( i = pos; i < node->count; i++) {
             node->keys[i] = node->keys[i + 1];
             node->children[i] = node->children[i + 1];
         }
