@@ -15,4 +15,5 @@ Here you can all the lab programs for vr23 advanced data structures and algorith
   - Dijkistra.c
 # week-8:
   - jobschedule.c
-  
+# week-9:
+  - knapsack.c
