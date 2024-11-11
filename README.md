@@ -17,3 +17,5 @@ Here you can all the lab programs for vr23 advanced data structures and algorith
   - jobschedule.c
 # week-9:
   - knapsack.c
+# week-11:
+  - knapsack_bck.c
